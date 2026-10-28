@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PATTARASAWAN S. // Senior Full-Stack & AI Systems Architect Portfolio</title>
+        <meta name="description" content="Minimalist, modern wireframe bento box portfolio and resume of PATTARASAWAN S. — Senior Full-Stack Engineer and AI Systems Architect." />
+
+        <!-- Tailwind CSS Play CDN for rapid zero-build execution -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "accent-orange": "#FF5500",
+                            "accent-orange-hover": "#E04B00",
+                            "bg-main": "#EAEAE6",
+                            "bg-card": "#F2F2EE",
+                            "wire-border": "#D1D1CB",
+                            "wire-dark": "#111111",
+                        },
+                        fontFamily: {
+                            display: ["Space Grotesk", "sans-serif"],
+                            mono: ["JetBrains Mono", "monospace"],
+                            sans: ["Plus Jakarta Sans", "sans-serif"],
+                            tech: ["Chakra Petch", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <!-- Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <!-- Three.js for 3D Cyber Robot & Knot -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+        <!-- Custom Wireframe & Bento Stylesheet -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body class="selection:bg-[#FF5500] selection:text-white">
+        <!-- =====================================================================
+       FLOATING RIGHT SOCIAL DOCK (Recreating Reference UI Right Sidebar)
+       ===================================================================== -->
+        <aside class="floating-social-rail" aria-label="Social and Quick Links">
+            <a href="#hero" class="social-rail-item" title="Top / System Status" aria-label="Top">
+                <i data-lucide="crosshair" class="w-4 h-4"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" class="social-rail-item" title="GitHub" aria-label="GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-rail-item" title="LinkedIn" aria-label="LinkedIn">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-rail-item" title="Twitter / X" aria-label="Twitter">
+                <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#terminal-section" class="social-rail-item" title="Open Terminal" aria-label="Terminal">
+                <i data-lucide="terminal" class="w-4 h-4"></i>
+            </a>
+            <button class="social-rail-item copy-email-btn" title="Copy Email" aria-label="Copy Email">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+            </button>
+        </aside>
+
+        <!-- =====================================================================
+       MAIN WIREFRAME BENTO CONTAINER
+       ===================================================================== -->
+        <main class="wireframe-container">
+            <!-- -----------------------------------------------------------------
+         TOP NAV BAR (Header Compartment)
+         ----------------------------------------------------------------- -->
+            <header class="wireframe-cell grid grid-cols-12 items-center bg-[#ECECE8] border-b border-[#D1D1CB]">
+                <!-- Brand & Wireframe Box -->
+                <div class="col-span-12 md:col-span-3 border-b md:border-b-0 md:border-r border-[#D1D1CB] p-4 flex items-center justify-between">
+                    <a href="#hero" class="flex items-center gap-3 group text-decoration-none">
+                        <div class="w-9 h-9 border border-black bg-white flex items-center justify-center relative shadow-sm">
+                            <span class="corner-node corner-node-tl"></span>
+                            <span class="corner-node corner-node-br"></span>
+                            <i data-lucide="box" class="w-5 h-5 text-black group-hover:text-[#FF5500] transition-colors"></i>
+                        </div>
+                        <div>
+                            <div class="font-display font-black text-lg tracking-tight text-black leading-none">PATTARASAWAN S.</div>
+                            <div class="font-mono text-[10px] tracking-widest text-[#7A7A77] font-semibold mt-0.5">RESUME // PORT</div>
+                        </div>
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-black hover:text-[#FF5500]" aria-label="Toggle navigation menu">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav id="main-nav" class="col-span-12 md:col-span-6 hidden md:flex items-center justify-center gap-6 lg:gap-8 py-3 px-4 font-mono text-xs font-semibold text-[#5A5A58]">
+                    <a href="#about" class="hover:text-black transition-colors py-1">ABOUT_ME</a>
+                    <a href="#career" class="hover:text-black transition-colors py-1">CAREER & INFO</a>
+                    <a href="#skills" class="hover:text-black transition-colors py-1">SKILLS_MATRIX</a>
+                    <a href="#repos" class="hover:text-black transition-colors py-1">FEATURED_REPOS</a>
+                    <a href="#terminal-section" class="hover:text-black transition-colors py-1">CLI_TERMINAL</a>
+                </nav>
+
+                <!-- System Status & CTA Button -->
+                <div class="col-span-12 md:col-span-3 border-t md:border-t-0 md:border-l border-[#D1D1CB] p-3 lg:p-4 flex items-center justify-between md:justify-end gap-3 lg:gap-4">
+                    <div class="hidden sm:flex items-center gap-2 font-mono text-[11px] text-[#5A5A58]">
+                        <span class="status-pulse"></span>
+                        <span>AVAILABLE</span>
+                    </div>
+                    <a href="#contact" class="btn-orange">
+                        <span>CONTACT ME</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+            </header>
+
+            <!-- -----------------------------------------------------------------
+         HERO BENTO COMPARTMENT (Matching Reference Image)
+         ----------------------------------------------------------------- -->
+            <section id="hero" class="wireframe-cell grid grid-cols-12 relative overflow-hidden bg-[#ECECE8]">
+                <!-- Top Sub-Bar with Corner Cross and Coordinates -->
+                <div class="col-span-12 grid grid-cols-12 border-b border-[#D1D1CB]">
+                    <!-- Top Left Wireframe X-Square (Identical to reference image) -->
+                    <div class="col-span-2 md:col-span-1 border-r border-[#D1D1CB] aspect-square max-w-[64px] flex items-center justify-center bg-[#E4E4E0] relative">
+                        <svg class="w-full h-full p-3 text-[#A8A8A2]" viewBox="0 0 40 40">
+                            <line x1="4" y1="4" x2="36" y2="36" stroke="currentColor" stroke-width="1.5" />
+                            <line x1="36" y1="4" x2="4" y2="36" stroke="currentColor" stroke-width="1.5" />
+                            <rect x="2" y="2" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </div>
+
+                    <div class="col-span-10 md:col-span-11 px-4 sm:px-6 flex items-center justify-between font-mono text-[11px] text-[#7A7A77]">
+                        <div class="flex items-center gap-3">
+                            <span class="inline-block w-2 h-2 bg-[#FF5500]"></span>
+                            <span class="tracking-widest font-semibold text-black uppercase">FULL-STACK ARCHITECT // BACK-END DEVELOPER</span>
+                        </div>
+                        <div class="hidden sm:flex items-center gap-4">
+                            <span>LOC: UDT [17° 24' N, 102° 48' E]</span>
+                            <span class="text-[#D1D1CB]">|</span>
+                            <span>SPEC: HIGH-PERFORMANCE WEB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giant Headline Row with Corner Accents (Direct recreation from reference) -->
+                <div class="col-span-12 border-b border-[#D1D1CB] px-4 sm:px-8 py-6 sm:py-10 relative bg-[#F2F2EE]">
+                    <!-- Orange Corner Nodes -->
+                    <span class="corner-node corner-node-tl"></span>
+                    <span class="corner-node corner-node-tr"></span>
+                    <span class="corner-node corner-node-bl"></span>
+                    <span class="corner-node corner-node-br"></span>
+
+                    <!-- Giant Typography -->
+                    <div class="giant-headline select-none text-center sm:text-left">PATTARASAWAN S.</div>
+
+                    <div class="flex flex-wrap items-center justify-between gap-4 mt-3 pt-3 border-t border-[#D1D1CB]">
+                        <div class="flex items-center gap-2 font-mono text-xs text-[#5A5A58]">
+                            <span class="w-2.5 h-2.5 bg-[#FF5500] inline-block"></span>
+                            <span class="font-bold tracking-wider text-black">CRAFTING RESILIENT DIGITAL SYSTEMS</span>
+                        </div>
+                        <div class="font-mono text-xs text-[#7A7A77]">BUILDING TOMORROW // ZERO DOWNTIME PHILOSOPHY</div>
+                    </div>
+                </div>
+
+                <!-- Hero 3-Column Bento Structure -->
+                <!-- Left Column: Mission, Bio Summary & Actions -->
+                <div class="col-span-12 lg:col-span-4 border-b lg:border-b-0 lg:border-r border-[#D1D1CB] p-6 sm:p-8 flex flex-col justify-between bg-[#ECECE8]">
+                    <div>
+                        <div class="inline-flex items-center gap-2 mb-4">
+                            <span class="wire-badge active">JUNIOR SOFTWARE ENGINEER</span>
+                            <span class="wire-badge">2+ YRS EXP</span>
+                        </div>
+                        <p class="font-mono text-sm sm:text-base text-[#333333] leading-relaxed mb-6 font-normal">
+                            Engineering robust web architectures, scalable cloud microservices, and AI-powered interfaces — transforming visionary software ideas into real-world, high-throughput
+                            systems.
+                        </p>
+                        <div class="space-y-2 text-xs font-mono text-[#5A5A58]">
+                            <div class="flex items-center justify-between py-1.5 border-b border-[#DCDCD8]">
+                                <span>CORE ROLE:</span>
+                                <strong class="text-black font-semibold">Full-Stack & Back-End Developer</strong>
+                            </div>
+                            <div class="flex items-center justify-between py-1.5 border-b border-[#DCDCD8]">
+                                <span>STATUS:</span>
+                                <span class="text-emerald-700 font-semibold flex items-center gap-1.5"> <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Open for High-Impact Roles </span>
+                            </div>
+                            <div class="flex items-center justify-between py-1.5 border-b border-[#DCDCD8]">
+                                <span>LOCATION:</span>
+                                <span class="text-black font-medium">Bangkok / Global Remote</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <a href="#repos" class="btn-orange">
+                            <span>EXPLORE REPOSITORIES</span>
+                            <i data-lucide="folder-git-2" class="w-4 h-4"></i>
+                        </a>
+                        <button class="btn-wire copy-email-btn">
+                            <span>COPY EMAIL</span>
+                            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Center Column: 3D Cute Cyber Robot (Hero Centerpiece with mouse tracking) -->
+                <div
+                    class="col-span-12 sm:col-span-7 lg:col-span-5 border-b sm:border-b-0 sm:border-r border-[#D1D1CB] p-6 relative flex flex-col items-center justify-center bg-[#F5F5F2] min-h-[380px]"
+                >
+                    <!-- Technical Label -->
+                    <div class="absolute top-4 left-4 font-mono text-[10px] tracking-wider text-[#7A7A77] flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#FF5500]"></span>
+                        <span>INTERACTIVE 3D COMPONENT // MOUSE_TRACK: ON</span>
+                    </div>
+
+                    <!-- 3D Canvas Mount Point -->
+                    <div id="robot-canvas-container"></div>
+
+                    <div class="absolute bottom-4 font-mono text-[10px] text-[#7A7A77] text-center">DRAG TO ROTATE // INTERACTIVE WEBGL MESH</div>
+                </div>
+
+                <!-- Right Column: Profile Portrait & Quick Stats Compartment -->
+                <div class="col-span-12 sm:col-span-5 lg:col-span-3 flex flex-col bg-[#ECECE8]">
+                    <!-- Profile Portrait Compartment (Balanced size, Technical Wireframe aesthetic) -->
+                    <div class="p-5 border-b border-[#D1D1CB] relative bg-[#F7F7F4] flex flex-col items-center justify-center">
+                        <!-- Target Corner Reticles -->
+                        <span class="reticle-bracket bracket-tl"></span>
+                        <span class="reticle-bracket bracket-tr"></span>
+                        <span class="reticle-bracket bracket-bl"></span>
+                        <span class="reticle-bracket bracket-br"></span>
+
+                        <!-- Header Spec info on portrait frame -->
+                        <div class="w-full flex items-center justify-between mb-3 font-mono text-[10px] text-[#7A7A77]">
+                            <span class="flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5500]"></span>
+                                <strong class="text-black">DEV_PORTRAIT</strong>
+                            </span>
+                            <span>SPEC // ID_01</span>
+                        </div>
+
+                        <!-- Profile Photo Frame (Not too large: 150px wide x 185px high) -->
+                        <div class="relative w-36 h-44 sm:w-40 sm:h-48 border border-[#D1D1CB] bg-[#EAEAE6] overflow-hidden group shadow-sm">
+                            <!-- Orange corner nodes -->
+                            <span class="corner-node corner-node-tl"></span>
+                            <span class="corner-node corner-node-tr"></span>
+                            <span class="corner-node corner-node-bl"></span>
+                            <span class="corner-node corner-node-br"></span>
+
+                            <!-- 
+              [คำแนะนำในการเปลี่ยนรูปภาพของคุณ]:
+              1. ใส่ไฟล์รูปภาพของคุณ (เช่น my-photo.jpg) ในโฟลเดอร์ assets/
+              2. เปลี่ยน src="..." ด้านล่างนี้เป็น "assets/my-photo.jpg"
+              หรือคลิกปุ่ม 'CHANGE PHOTO' ด้านล่างเพื่อเลือกไฟล์ทดสอบพรีวิวได้ทันที
+            -->
+                            <img
+                                id="hero-profile-img"
+                                src="assets/profile_avatar.jpeg"
+                                alt="Profile Portrait of Developer"
+                                class="w-full h-full object-cover object-center grayscale-90 contrast-105 group-hover:grayscale-0 transition-all duration-300"
+                            />
+
+                            <!-- Subtle Gradient Tech Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
+
+                            <!-- Bottom Tag on Photo -->
+                            <div class="absolute bottom-2 left-2 right-2 flex items-center justify-between font-mono text-[9px] text-white">
+                                <span class="bg-black/75 px-1.5 py-0.5 rounded-xs tracking-wider">PATTARASAWAN S.</span>
+                                <span class="text-[#FF5500] font-bold">● ACTIVE</span>
+                            </div>
+                        </div>
+
+                        <!-- Action bar under photo: Click to upload/preview new photo -->
+                        <div class="w-full mt-3 pt-2 border-t border-[#DCDCD8] flex items-center justify-between font-mono text-[10px] text-[#7A7A77]">
+                            <span></span>
+                            <span>RATIO: 4:5</span>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Half: Fast Profile Navigation & Quick Stats -->
+                    <div class="p-5 flex-1 flex flex-col justify-between bg-[#ECECE8]">
+                        <div class="font-mono text-xs text-[#7A7A77] flex items-center justify-between pb-2 border-b border-[#D1D1CB]">
+                            <span>QUICK NAVIGATION:</span>
+                            <div class="flex gap-1">
+                                <a href="#career" class="p-1 hover:text-black" aria-label="Go to Career"><i data-lucide="chevron-left" class="w-3.5 h-3.5"></i></a>
+                                <a href="#repos" class="p-1 hover:text-black" aria-label="Go to Repositories"><i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3 my-4">
+                            <div class="border border-[#D1D1CB] p-3 bg-white">
+                                <div class="font-display font-black text-2xl text-black">10+</div>
+                                <div class="font-mono text-[10px] text-[#7A7A77]">GIT REPOSITORIES</div>
+                            </div>
+                            <div class="border border-[#D1D1CB] p-3 bg-white">
+                                <div class="font-display font-black text-2xl text-[#FF5500]">99.98%</div>
+                                <div class="font-mono text-[10px] text-[#7A7A77]">SYSTEM SLA</div>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="font-mono text-xs font-semibold text-black hover:text-[#FF5500] flex items-center justify-between group pt-2 border-t border-[#D1D1CB]">
+                            <span>SCHEDULE ARCHITECTURE CALL</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -----------------------------------------------------------------
+         TECH STACK & PARTNERS TICKER (Matching Reference Bar)
+         ----------------------------------------------------------------- -->
+            <div class="wireframe-cell bg-white border-b border-[#D1D1CB] py-3.5 overflow-hidden flex items-center">
+                <div class="px-6 border-r border-[#D1D1CB] shrink-0 font-mono text-xs font-bold tracking-wider text-black flex items-center gap-2">
+                    <span class="w-2 h-2 bg-[#FF5500]"></span>
+                    <span>TECH_ARSENAL:</span>
+                </div>
+
+                <div class="overflow-hidden whitespace-nowrap flex-1 flex items-center">
+                    <div class="marquee-track flex items-center gap-12 font-mono text-xs text-[#444444] font-semibold">
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="code-2" class="w-4 h-4 text-[#FF5500]"></i> REACT / NEXT.JS 15 </span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="file-code" class="w-4 h-4 text-[#FF5500]"></i> TYPESCRIPT 5.8 </span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="file-code-corner" class="w-4 h-4 text-[#FF5500]"></i> JAVASCRIPT ES17 </span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="cpu" class="w-4 h-4 text-[#FF5500]"></i> PYTHON / AUTOMATION</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="code-2" class="w-4 h-4 text-[#FF5500]"></i> VUE / NUXT.JS 4.6 </span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="file-code" class="w-4 h-4 text-[#FF5500]"></i> PHP / LARAVEL 13</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="boxes" class="w-4 h-4 text-[#FF5500]"></i> DOCKER</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="database" class="w-4 h-4 text-[#FF5500]"></i> POSTGRESQL & REDIS</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="layers" class="w-4 h-4 text-[#FF5500]"></i> TAILWIND CSS V4</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="database-search" class="w-4 h-4 text-[#FF5500]"></i> MYSQL & MARIA</span>
+
+                        <!-- Duplicate for seamless infinite loop -->
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="code-2" class="w-4 h-4 text-[#FF5500]"></i> REACT / NEXT.JS 15 </span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="file-code" class="w-4 h-4 text-[#FF5500]"></i> TYPESCRIPT 5.8 </span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="file-code-corner" class="w-4 h-4 text-[#FF5500]"></i> JAVASCRIPT ES17 </span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="cpu" class="w-4 h-4 text-[#FF5500]"></i> PYTHON / AUTOMATION</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="code-2" class="w-4 h-4 text-[#FF5500]"></i> VUE / NUXT.JS 4.6 </span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="file-code" class="w-4 h-4 text-[#FF5500]"></i> PHP / LARAVEL 13</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="boxes" class="w-4 h-4 text-[#FF5500]"></i> DOCKER</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="database" class="w-4 h-4 text-[#FF5500]"></i> POSTGRESQL & REDIS</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="layers" class="w-4 h-4 text-[#FF5500]"></i> TAILWIND CSS V4</span>
+                        <span class="flex items-center gap-2 hover:text-[#FF5500] cursor-default"><i data-lucide="database-search" class="w-4 h-4 text-[#FF5500]"></i> MYSQL & MARIA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -----------------------------------------------------------------
+         SECTION 1: ข้อมูลสำคัญและข้อมูลสายงาน (Core Info & Career Path)
+         ----------------------------------------------------------------- -->
+            <section id="career" class="wireframe-cell bg-[#EAEAE6]">
+                <!-- Section Header -->
+                <div class="p-6 border-b border-[#D1D1CB] flex flex-wrap items-center justify-between gap-4 bg-[#F2F2EE]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 bg-[#FF5500]"></span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-black uppercase">01 // CAREER & ROLE</h2>
+                    </div>
+                    <div class="font-mono text-xs text-[#7A7A77]">[TRACK: FULL_STACK & BACK_END]</div>
+                </div>
+
+                <!-- Bento Compartments for Career & Metrics -->
+                <div class="grid grid-cols-12">
+                    <!-- Big Metric Highlights -->
+                    <div class="col-span-12 lg:col-span-4 border-b lg:border-b-0 lg:border-r border-[#D1D1CB] p-6 sm:p-8 bg-white flex flex-col justify-between">
+                        <div>
+                            <div class="wire-badge active mb-4">ENGINEERING HIGHLIGHTS</div>
+                            <h3 class="font-display font-bold text-xl text-black mb-3">Proven Track Record in Scale</h3>
+                            <p class="font-sans text-sm text-[#5A5A58] leading-relaxed mb-6">
+                                Delivering high-availability software infrastructure with meticulous focus on latency, clean architecture, and developer productivity.
+                            </p>
+
+                            <div class="space-y-4">
+                                <div class="p-4 border border-[#D1D1CB] bg-[#F9F9F7] relative">
+                                    <span class="corner-node corner-node-tl"></span>
+                                    <span class="corner-node corner-node-br"></span>
+                                    <div class="font-mono text-xs text-[#7A7A77] mb-1">TOTAL PRODUCTION COMMITS</div>
+                                    <div class="font-display font-black text-3xl text-black">1,480+</div>
+                                    <div class="font-mono text-[11px] text-emerald-700 mt-1">▲ Continuous CI/CD pipeline automation</div>
+                                </div>
+
+                                <div class="p-4 border border-[#D1D1CB] bg-[#F9F9F7] relative">
+                                    <span class="corner-node corner-node-tl"></span>
+                                    <span class="corner-node corner-node-br"></span>
+                                    <div class="font-mono text-xs text-[#7A7A77] mb-1">MICROSERVICES ARCHITECTED</div>
+                                    <div class="font-display font-black text-3xl text-[#FF5500]">28+ Services</div>
+                                    <div class="font-mono text-[11px] text-[#5A5A58] mt-1">Dockerized, gRPC & REST event-driven</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 mt-6 border-t border-[#D1D1CB] font-mono text-xs text-[#7A7A77]">VERIFIED VIA GITHUB ENTERPRISE & PROD CLUSTERS</div>
+                    </div>
+
+                    <!-- Career History Timeline (Modular Bento Cards) -->
+                    <div class="col-span-12 lg:col-span-8 p-6 sm:p-8 bg-[#ECECE8]">
+                        <div class="font-mono text-xs text-[#7A7A77] mb-6 flex items-center justify-between">
+                            <span>CHRONOLOGICAL TIMELINE:</span>
+                            <span>2023 — 2026 PRESENT</span>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Experience Item 1 -->
+                            <div class="border border-[#D1D1CB] bg-white p-6 relative group hover:border-black transition-all shadow-sm">
+                                <span class="corner-node corner-node-tl"></span>
+                                <span class="corner-node corner-node-tr"></span>
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="font-display font-bold text-lg text-black">Lead Software & AI Architect</span>
+                                        <span class="wire-badge active">CURRENT</span>
+                                    </div>
+                                    <div class="font-mono text-xs text-[#7A7A77]">2023 — PRESENT // HYPERSCALE TECH</div>
+                                </div>
+                                <p class="font-sans text-sm text-[#555555] mb-4">
+                                    Spearheaded the design and deployment of enterprise-grade LLM retrieval-augmented generation (RAG) engines, microservices orchestration, and low-latency frontend
+                                    applications serving over 500k+ active users.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="wire-badge">Next.js 15</span>
+                                    <span class="wire-badge">Go</span>
+                                    <span class="wire-badge">Kubernetes</span>
+                                    <span class="wire-badge">LangChain</span>
+                                    <span class="wire-badge">Redis</span>
+                                </div>
+                            </div>
+
+                            <!-- Experience Item 2 -->
+                            <div class="border border-[#D1D1CB] bg-white p-6 relative group hover:border-black transition-all shadow-sm">
+                                <span class="corner-node corner-node-tl"></span>
+                                <span class="corner-node corner-node-tr"></span>
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                    <div class="font-display font-bold text-lg text-black">Senior Frontend & Systems Engineer</div>
+                                    <div class="font-mono text-xs text-[#7A7A77]">2021 — 2023 // NOVASYNC LABS</div>
+                                </div>
+                                <p class="font-sans text-sm text-[#555555] mb-4">
+                                    Engineered custom component design systems with strict web performance budgets, achieving a 99/100 Lighthouse score and reducing bundle size by 42%. Built real-time
+                                    WebSocket dashboard workflows.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="wire-badge">React</span>
+                                    <span class="wire-badge">TypeScript</span>
+                                    <span class="wire-badge">Tailwind CSS</span>
+                                    <span class="wire-badge">WebSockets</span>
+                                    <span class="wire-badge">Jest</span>
+                                </div>
+                            </div>
+
+                            <!-- Experience Item 3 -->
+                            <div class="border border-[#D1D1CB] bg-white p-6 relative group hover:border-black transition-all shadow-sm">
+                                <span class="corner-node corner-node-tl"></span>
+                                <span class="corner-node corner-node-tr"></span>
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                    <div class="font-display font-bold text-lg text-black">Full-Stack Web Developer</div>
+                                    <div class="font-mono text-xs text-[#7A7A77]">2019 — 2021 // CLOUDLOGIC LABS</div>
+                                </div>
+                                <p class="font-sans text-sm text-[#555555] mb-4">
+                                    Developed full-stack web applications with Node.js and PostgreSQL. Designed relational database schemas, automated testing pipelines, and integrated third-party
+                                    payment gateways.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="wire-badge">Node.js</span>
+                                    <span class="wire-badge">Express</span>
+                                    <span class="wire-badge">PostgreSQL</span>
+                                    <span class="wire-badge">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -----------------------------------------------------------------
+         SECTION 2: ประวัติส่วนตัว & การศึกษา (Personal Profile & Philosophy)
+         ----------------------------------------------------------------- -->
+            <section id="about" class="wireframe-cell bg-[#F2F2EE]">
+                <!-- Section Header -->
+                <div class="p-6 border-b border-[#D1D1CB] flex flex-wrap items-center justify-between gap-4 bg-[#EAEAE6]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 bg-[#FF5500]"></span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-black uppercase">02 // ABOUT & PHILOSOPHY</h2>
+                    </div>
+                    <div class="font-mono text-xs text-[#7A7A77]">[SPEC: BIO_MODULE // EDUCATION_LOG]</div>
+                </div>
+
+                <div class="grid grid-cols-12">
+                    <!-- Biography & Education -->
+                    <div class="col-span-12 md:col-span-7 border-b md:border-b-0 md:border-r border-[#D1D1CB] p-6 sm:p-8 bg-white">
+                        <div class="wire-badge active mb-4">BIOGRAPHY SUMMARY</div>
+                        <h3 class="font-display font-bold text-2xl text-black mb-4">Passionate About Precision & Resilient Software</h3>
+                        <p class="font-sans text-sm sm:text-base text-[#444444] leading-relaxed mb-4">
+                            ผมเป็นวิศวกรซอฟต์แวร์ที่หลงใหลในความสมบูรณ์แบบของการสร้างระบบ (Craftsmanship & Architecture) ตั้งแต่ระดับพิกเซลบนหน้าจอไปจนถึงการทำงานของ Backend และ Cloud Infrastructure
+                            ที่รับรองโหลดมหาศาล
+                        </p>
+                        <p class="font-sans text-sm sm:text-base text-[#444444] leading-relaxed mb-6">
+                            เชื่อมั่นในการเขียนโค้ดที่อ่านง่าย บำรุงรักษาได้จริง และมีระเบียบตามหลักวิศวกรรม มีประสบการณ์ตรงทั้งการออกแบบสถาปัตยกรรมระดับองค์กร
+                            และการสร้างผลิตภัณฑ์สตาร์ทอัพที่เติบโตอย่างรวดเร็ว
+                        </p>
+
+                        <!-- Education Compartment -->
+                        <div class="p-5 border border-[#D1D1CB] bg-[#F8F8F5] relative mt-6">
+                            <span class="reticle-bracket bracket-tl"></span>
+                            <span class="reticle-bracket bracket-tr"></span>
+                            <span class="reticle-bracket bracket-bl"></span>
+                            <span class="reticle-bracket bracket-br"></span>
+
+                            <div class="font-mono text-xs text-[#FF5500] font-bold tracking-wider mb-2 flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                <span>EDUCATION // วุฒิการศึกษา</span>
+                            </div>
+                            <div class="font-display font-bold text-lg text-black">Bachelor of Science in Computer Science</div>
+                            <div class="font-mono text-xs text-[#666666] mt-1">First Class Honors (เกียรตินิยมอันดับ 1) • GPA: 3.85 / 4.00</div>
+                            <p class="font-sans text-xs text-[#555555] mt-2">Focus: Distributed Systems, Algorithm Complexity, Software Architecture & Human-Computer Interaction (HCI).</p>
+                        </div>
+                    </div>
+
+                    <!-- 4 Core Engineering Philosophies & 3D Architectural Node -->
+                    <div class="col-span-12 md:col-span-5 p-6 sm:p-8 bg-[#F2F2EE] flex flex-col justify-between">
+                        <div>
+                            <div class="font-mono text-xs text-[#7A7A77] tracking-wider mb-4 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-black"></span>
+                                <span>ENGINEERING PRINCIPLES // ปรัชญาการทำงาน</span>
+                            </div>
+
+                            <!-- 3D Isometric Knot Reticle Box (Relocated from Hero to Philosophy section) -->
+                            <div class="mb-4 p-4 border border-[#D1D1CB] relative bg-[#121212] flex items-center justify-between overflow-hidden">
+                                <span class="reticle-bracket bracket-tl" style="border-color: #888888"></span>
+                                <span class="reticle-bracket bracket-tr" style="border-color: #888888"></span>
+                                <span class="reticle-bracket bracket-bl" style="border-color: #888888"></span>
+                                <span class="reticle-bracket bracket-br" style="border-color: #888888"></span>
+
+                                <div>
+                                    <div class="font-mono text-[10px] text-[#FF5500] font-bold">SYSTEM_ARCH // 6-AXIS</div>
+                                    <div class="font-mono text-xs text-white font-semibold mt-0.5">MODULAR COUPLING</div>
+                                    <div class="font-mono text-[9px] text-[#888888] mt-1">ROTATING ISOMETRIC NODE</div>
+                                </div>
+
+                                <!-- 3D Knot Canvas Mount -->
+                                <div id="knot-canvas-container" style="width: 100px; height: 100px"></div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="p-4 border border-[#D1D1CB] bg-white">
+                                    <div class="font-mono text-xs text-[#FF5500] font-bold">01 // ZERO-JANK PERFORMANCE</div>
+                                    <div class="font-display font-bold text-base text-black mt-1">Speed is a Core Feature</div>
+                                    <p class="font-sans text-xs text-[#555555] mt-1">Sub-100ms TTFB, 60fps animations, optimized bundle sizes, and strict CWV discipline.</p>
+                                </div>
+
+                                <div class="p-4 border border-[#D1D1CB] bg-white">
+                                    <div class="font-mono text-xs text-[#FF5500] font-bold">02 // ARCHITECTURAL MODULARITY</div>
+                                    <div class="font-display font-bold text-base text-black mt-1">Loose Coupling, High Cohesion</div>
+                                    <p class="font-sans text-xs text-[#555555] mt-1">Domain-driven design with crystal-clear boundaries, type safety, and testable modules.</p>
+                                </div>
+
+                                <div class="p-4 border border-[#D1D1CB] bg-white">
+                                    <div class="font-mono text-xs text-[#FF5500] font-bold">03 // OBSERVABILITY FIRST</div>
+                                    <div class="font-display font-bold text-base text-black mt-1">You Can’t Fix What You Can’t See</div>
+                                    <p class="font-sans text-xs text-[#555555] mt-1">Comprehensive telemetry, structured logging, distributed tracing, and actionable alerts.</p>
+                                </div>
+
+                                <div class="p-4 border border-[#D1D1CB] bg-white">
+                                    <div class="font-mono text-xs text-[#FF5500] font-bold">04 // EMPATHY & USER CENTRICITY</div>
+                                    <div class="font-display font-bold text-base text-black mt-1">Code Serves Real People</div>
+                                    <p class="font-sans text-xs text-[#555555] mt-1">Accessible interfaces (WCAG 2.1), ergonomic UX, and meaningful error feedback.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -----------------------------------------------------------------
+         SECTION 3: HARD SKILLS & SOFT SKILLS (Interactive Bento Matrix)
+         ----------------------------------------------------------------- -->
+            <section id="skills" class="wireframe-cell bg-[#ECECE8]">
+                <!-- Section Header with Filter Controls -->
+                <div class="p-6 border-b border-[#D1D1CB] flex flex-wrap items-center justify-between gap-4 bg-[#F2F2EE]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 bg-[#FF5500]"></span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-black uppercase">03 // SKILLS MATRIX</h2>
+                    </div>
+
+                    <!-- Interactive Filter Buttons -->
+                    <div class="flex flex-wrap items-center gap-1.5 font-mono text-xs">
+                        <button class="skill-filter-btn px-3 py-1.5 border border-[#D1D1CB] bg-white text-black active" data-filter="all">ALL [24]</button>
+                        <button class="skill-filter-btn px-3 py-1.5 border border-[#D1D1CB] bg-white text-black" data-filter="hard">HARD SKILLS</button>
+                        <button class="skill-filter-btn px-3 py-1.5 border border-[#D1D1CB] bg-white text-black" data-filter="soft">SOFT SKILLS</button>
+                        <button class="skill-filter-btn px-3 py-1.5 border border-[#D1D1CB] bg-white text-black" data-filter="ai">AI & ARCH</button>
+                    </div>
+                </div>
+
+                <!-- Bento Grid for Skills -->
+                <div class="grid grid-cols-12 gap-px bg-[#D1D1CB]">
+                    <!-- Skill 1: Frontend Architecture (Hard) -->
+                    <div class="skill-card col-span-12 sm:col-span-6 lg:col-span-4 p-6 bg-white flex flex-col justify-between" data-category="hard">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="wire-badge active">FRONTEND ARCH</span>
+                                <span class="font-mono text-xs font-bold text-black">98% PROFICIENT</span>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-black">Modern UI & Performance</h3>
+                            <p class="font-sans text-xs text-[#555555] mt-2 mb-4">
+                                Expert in React 19, Next.js App Router, Vue 3, state management (Zustand, Redux Toolkit), Tailwind CSS v4 design tokens, and CSS Grid architectures.
+                            </p>
+                        </div>
+                        <div class="w-full bg-[#EEEEEE] h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-[#FF5500] h-full" style="width: 98%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 2: Backend & Distributed (Hard) -->
+                    <div class="skill-card col-span-12 sm:col-span-6 lg:col-span-4 p-6 bg-white flex flex-col justify-between" data-category="hard">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="wire-badge active">BACKEND & API</span>
+                                <span class="font-mono text-xs font-bold text-black">95% PROFICIENT</span>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-black">High-Concurrency Backends</h3>
+                            <p class="font-sans text-xs text-[#555555] mt-2 mb-4">
+                                Building resilient services with Go (Golang), Node.js, Python FastAPI, PostgreSQL (indexes, partitioning), Redis cache clustering, and GraphQL.
+                            </p>
+                        </div>
+                        <div class="w-full bg-[#EEEEEE] h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-[#FF5500] h-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 3: AI & LLM Systems (AI / Hard) -->
+                    <div class="skill-card col-span-12 sm:col-span-6 lg:col-span-4 p-6 bg-white flex flex-col justify-between" data-category="ai">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="wire-badge active">AI & RAG PIPELINES</span>
+                                <span class="font-mono text-xs font-bold text-black">92% PROFICIENT</span>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-black">Generative Systems & Agents</h3>
+                            <p class="font-sans text-xs text-[#555555] mt-2 mb-4">
+                                Implementation of multi-agent workflows, vector databases (Pinecone, ChromaDB, pgvector), prompt optimization, and semantic search integration.
+                            </p>
+                        </div>
+                        <div class="w-full bg-[#EEEEEE] h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-[#FF5500] h-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 4: Cloud & DevOps (Hard) -->
+                    <div class="skill-card col-span-12 sm:col-span-6 lg:col-span-4 p-6 bg-white flex flex-col justify-between" data-category="hard">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="wire-badge">INFRA & DEVOPS</span>
+                                <span class="font-mono text-xs font-bold text-black">88% PROFICIENT</span>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-black">Cloud Native Infrastructure</h3>
+                            <p class="font-sans text-xs text-[#555555] mt-2 mb-4">
+                                Containerization with Docker, Kubernetes cluster orchestration, GitHub Actions automated CI/CD pipelines, Terraform IaC, and AWS ECS/S3/CloudFront.
+                            </p>
+                        </div>
+                        <div class="w-full bg-[#EEEEEE] h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-black h-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 5: Complex Problem Solving (Soft) -->
+                    <div class="skill-card col-span-12 sm:col-span-6 lg:col-span-4 p-6 bg-[#F9F9F7] flex flex-col justify-between" data-category="soft">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="wire-badge">SOFT SKILL // 01</span>
+                                <span class="font-mono text-xs font-bold text-black">CORE ASSET</span>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-black">Complex Problem Solving</h3>
+                            <p class="font-sans text-xs text-[#555555] mt-2 mb-4">
+                                Deconstructing ambiguous engineering requirements into verifiable technical milestones, root-cause debugging under high pressure, and architectural tradeoffs.
+                            </p>
+                        </div>
+                        <div class="font-mono text-[10px] text-[#7A7A77]">METRIC: 0 UNRESOLVED CRITICAL INCIDENTS</div>
+                    </div>
+
+                    <!-- Skill 6: Technical Leadership & Mentorship (Soft) -->
+                    <div class="skill-card col-span-12 sm:col-span-6 lg:col-span-4 p-6 bg-[#F9F9F7] flex flex-col justify-between" data-category="soft">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="wire-badge">SOFT SKILL // 02</span>
+                                <span class="font-mono text-xs font-bold text-black">LEADERSHIP</span>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-black">Team Mentorship & Reviews</h3>
+                            <p class="font-sans text-xs text-[#555555] mt-2 mb-4">
+                                Conducting constructive architectural code reviews, pairing with junior/mid-level engineers, running sprint retrospectives, and drafting engineering RFCs.
+                            </p>
+                        </div>
+                        <div class="font-mono text-[10px] text-[#7A7A77]">METRIC: 12+ JUNIOR ENGINEERS MENTORED</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -----------------------------------------------------------------
+         SECTION 4: ผลงานที่โดดเด่นแต่ละ REPO (Featured GitHub Repositories)
+         ----------------------------------------------------------------- -->
+            <section id="repos" class="wireframe-cell bg-[#F2F2EE]">
+                <!-- Section Header -->
+                <div class="p-6 border-b border-[#D1D1CB] flex flex-wrap items-center justify-between gap-4 bg-[#EAEAE6]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 bg-[#FF5500]"></span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-black uppercase">04 // ผลงานที่โดดเด่นแต่ละ REPO (FEATURED PROJECTS)</h2>
+                    </div>
+                    <div class="font-mono text-xs text-[#7A7A77]">[OPEN SOURCE // CODE REPOSITORIES]</div>
+                </div>
+
+                <!-- Bento Grid of Projects -->
+                <div class="grid grid-cols-12 gap-px bg-[#D1D1CB]">
+                    <!-- Repo 1: omniverse-rag-core (Featured Double Card) -->
+                    <div class="col-span-12 lg:col-span-8 p-6 sm:p-8 bg-white relative group">
+                        <span class="corner-node corner-node-tl"></span>
+                        <span class="corner-node corner-node-tr"></span>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="folder-git-2" class="w-6 h-6 text-[#FF5500]"></i>
+                                <h3 class="font-display font-bold text-xl sm:text-2xl text-black">omniverse-rag-core</h3>
+                                <span class="wire-badge active">FEATURED</span>
+                            </div>
+                            <div class="flex items-center gap-3 font-mono text-xs text-[#7A7A77]">
+                                <span>★ 1.2k</span>
+                                <span>⑂ 240</span>
+                                <span class="text-black font-semibold">v3.1.0</span>
+                            </div>
+                        </div>
+
+                        <p class="font-sans text-sm sm:text-base text-[#444444] mb-6 leading-relaxed">
+                            High-throughput enterprise Retrieval-Augmented Generation engine featuring hybrid semantic vector search, dynamic re-ranking, and automatic context chunking across
+                            multi-modal document corpora.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 p-4 border border-[#D1D1CB] bg-[#F9F9F7] font-mono text-xs">
+                            <div>
+                                <span class="text-[#7A7A77] block text-[10px]">AVG LATENCY</span>
+                                <strong class="text-black text-sm">38ms P95</strong>
+                            </div>
+                            <div>
+                                <span class="text-[#7A7A77] block text-[10px]">THROUGHPUT</span>
+                                <strong class="text-black text-sm">4,500 req/s</strong>
+                            </div>
+                            <div>
+                                <span class="text-[#7A7A77] block text-[10px]">ARCHITECTURE</span>
+                                <strong class="text-black text-sm">Go / Vector DB</strong>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#D1D1CB]">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="wire-badge">Go</span>
+                                <span class="wire-badge">Python</span>
+                                <span class="wire-badge">Pinecone</span>
+                                <span class="wire-badge">gRPC</span>
+                                <span class="wire-badge">Docker</span>
+                            </div>
+                            <div class="flex items-center gap-3 font-mono text-xs">
+                                <button
+                                    class="repo-modal-trigger text-black hover:text-[#FF5500] font-bold flex items-center gap-1"
+                                    data-name="omniverse-rag-core"
+                                    data-desc="Enterprise RAG knowledge engine with hybrid vector search, semantic cache, and dynamic chunking."
+                                    data-tech="Go, Python, Pinecone, gRPC, Docker, Redis"
+                                    data-github="https://github.com"
+                                    data-live="https://github.com"
+                                    data-arch="Event-Driven Microservices with gRPC streaming and high-speed in-memory vector quantization."
+                                >
+                                    <span>INSPECT DETAILS</span>
+                                    <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repo 2: flux-state-engine -->
+                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 p-6 sm:p-8 bg-white relative flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="git-branch" class="w-5 h-5 text-black"></i>
+                                    <h3 class="font-display font-bold text-lg text-black">flux-state-engine</h3>
+                                </div>
+                                <span class="font-mono text-xs text-[#7A7A77]">★ 860</span>
+                            </div>
+                            <p class="font-sans text-xs sm:text-sm text-[#555555] mb-4">
+                                Zero-overhead atomic state management library for React and Vanilla TypeScript with built-in time-travel debugging and sub-millisecond selector rendering.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="wire-badge">TypeScript</span>
+                                <span class="wire-badge">React 19</span>
+                                <span class="wire-badge">Zero-Dep</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-[#D1D1CB] flex items-center justify-between">
+                            <span class="font-mono text-xs text-[#7A7A77]">LICENSE: MIT</span>
+                            <button
+                                class="repo-modal-trigger text-black hover:text-[#FF5500] font-mono text-xs font-bold"
+                                data-name="flux-state-engine"
+                                data-desc="Zero-dependency ultra-lightweight state store for modern web applications."
+                                data-tech="TypeScript, React, Vitest"
+                                data-github="https://github.com"
+                                data-live="https://github.com"
+                                data-arch="Observable state graph with structural sharing and memory-efficient weakmap proxies."
+                            >
+                                VIEW ARCHITECTURE →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Repo 3: bento-wireframe-ui -->
+                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 p-6 sm:p-8 bg-white relative flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="layout-grid" class="w-5 h-5 text-black"></i>
+                                    <h3 class="font-display font-bold text-lg text-black">bento-wireframe-ui</h3>
+                                </div>
+                                <span class="font-mono text-xs text-[#7A7A77]">★ 640</span>
+                            </div>
+                            <p class="font-sans text-xs sm:text-sm text-[#555555] mb-4">
+                                Design system and component library built with Tailwind CSS v4, CSS Grid compartments, and technical blueprint wireframe aesthetics.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="wire-badge">Tailwind v4</span>
+                                <span class="wire-badge">Next.js</span>
+                                <span class="wire-badge">Radix UI</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-[#D1D1CB] flex items-center justify-between">
+                            <span class="font-mono text-xs text-[#7A7A77]">LICENSE: MIT</span>
+                            <button
+                                class="repo-modal-trigger text-black hover:text-[#FF5500] font-mono text-xs font-bold"
+                                data-name="bento-wireframe-ui"
+                                data-desc="Accessible, modular bento layout system with technical blueprint borders."
+                                data-tech="Tailwind v4, CSS Grid, Radix UI, TypeScript"
+                                data-github="https://github.com"
+                                data-live="https://github.com"
+                                data-arch="Design token driven components with zero CSS bloat and native CSS variables."
+                            >
+                                VIEW ARCHITECTURE →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Repo 4: neural-cache-proxy -->
+                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 p-6 sm:p-8 bg-white relative flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="zap" class="w-5 h-5 text-black"></i>
+                                    <h3 class="font-display font-bold text-lg text-black">neural-cache-proxy</h3>
+                                </div>
+                                <span class="font-mono text-xs text-[#7A7A77]">★ 510</span>
+                            </div>
+                            <p class="font-sans text-xs sm:text-sm text-[#555555] mb-4">
+                                Intelligent reverse proxy that provides semantic vector caching for OpenAI and Claude API requests, slashing API costs by up to 68%.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="wire-badge">Go</span>
+                                <span class="wire-badge">Redis</span>
+                                <span class="wire-badge">Cosine Similarity</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-[#D1D1CB] flex items-center justify-between">
+                            <span class="font-mono text-xs text-[#7A7A77]">LICENSE: Apache 2.0</span>
+                            <button
+                                class="repo-modal-trigger text-black hover:text-[#FF5500] font-mono text-xs font-bold"
+                                data-name="neural-cache-proxy"
+                                data-desc="Semantic cache proxy for LLM endpoints with cosine similarity thresholding."
+                                data-tech="Go, Redis Vector, Docker, Prometheus"
+                                data-github="https://github.com"
+                                data-live="https://github.com"
+                                data-arch="High-throughput reverse proxy pipeline with streaming response pass-through."
+                            >
+                                VIEW ARCHITECTURE →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Repo 5: cyber-vision-3d -->
+                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 p-6 sm:p-8 bg-white relative flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="box" class="w-5 h-5 text-black"></i>
+                                    <h3 class="font-display font-bold text-lg text-black">cyber-vision-3d</h3>
+                                </div>
+                                <span class="font-mono text-xs text-[#7A7A77]">★ 430</span>
+                            </div>
+                            <p class="font-sans text-xs sm:text-sm text-[#555555] mb-4">
+                                WebGL & Three.js creative coding toolkit for interactive isometric data visualizers, holographic wireframe models, and GLSL shaders.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="wire-badge">Three.js</span>
+                                <span class="wire-badge">WebGL</span>
+                                <span class="wire-badge">GLSL</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-[#D1D1CB] flex items-center justify-between">
+                            <span class="font-mono text-xs text-[#7A7A77]">LICENSE: MIT</span>
+                            <button
+                                class="repo-modal-trigger text-black hover:text-[#FF5500] font-mono text-xs font-bold"
+                                data-name="cyber-vision-3d"
+                                data-desc="Real-time WebGL shader pipeline for tech wireframe visualizations."
+                                data-tech="Three.js, GLSL, Vite, WebGL"
+                                data-github="https://github.com"
+                                data-live="https://github.com"
+                                data-arch="Scene graph optimizer with instanced mesh rendering for 60fps performance on mobile."
+                            >
+                                VIEW ARCHITECTURE →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -----------------------------------------------------------------
+         SECTION 5: INTERACTIVE DEVELOPER TERMINAL / CLI
+         ----------------------------------------------------------------- -->
+            <section id="terminal-section" class="wireframe-cell bg-[#111111] text-white">
+                <div class="p-4 sm:p-6 border-b border-[#2A2A2A] flex items-center justify-between bg-[#191919]">
+                    <div class="flex items-center gap-3">
+                        <div class="flex gap-1.5">
+                            <span class="w-3 h-3 rounded-full bg-[#FF5F56] inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-[#FFBD2E] inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-[#27C93F] inline-block"></span>
+                        </div>
+                        <span class="font-mono text-xs text-zinc-400">PATTARASAWAN S.@wireframe-os: ~/portfolio (zsh)</span>
+                    </div>
+                    <div class="font-mono text-[11px] text-[#FF5500] hidden sm:block">TYPE 'help' FOR COMMANDS</div>
+                </div>
+
+                <div class="p-6">
+                    <div id="terminal-cli-output" class="terminal-body font-mono text-xs sm:text-sm">
+                        <div class="text-zinc-400">Connected to <strong class="text-white">PATTARASAWAN S._V2.4</strong> Interactive Shell.</div>
+                        <div class="text-zinc-500 mt-1">
+                            Type <span class="text-[#FF5500] font-semibold">'help'</span> to see available commands, or <span class="text-[#FF5500] font-semibold">'skills'</span> /
+                            <span class="text-[#FF5500] font-semibold">'repos'</span>.
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-[#2A2A2A] flex items-center">
+                        <span class="font-mono text-xs sm:text-sm text-[#FF5500] font-bold mr-2">dev@wireframe:~$</span>
+                        <input
+                            type="text"
+                            id="terminal-cli-input"
+                            class="terminal-input bg-transparent border-none outline-none font-mono text-xs sm:text-sm text-white flex-1"
+                            placeholder="Type a command (help, repos, skills, neofetch)..."
+                            autocomplete="off"
+                            spellcheck="false"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <!-- -----------------------------------------------------------------
+         SECTION 6: CONTACT & FOOTER BENTO
+         ----------------------------------------------------------------- -->
+            <section id="contact" class="wireframe-cell bg-[#EAEAE6]">
+                <div class="p-6 border-b border-[#D1D1CB] flex flex-wrap items-center justify-between gap-4 bg-[#F2F2EE]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 bg-[#FF5500]"></span>
+                        <h2 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-black uppercase">05 // ติดต่อและร่วมงาน (CONNECT & INITIATE)</h2>
+                    </div>
+                    <div class="font-mono text-xs text-[#7A7A77]">[STATUS: OPEN_FOR_HIRING // FREELANCE]</div>
+                </div>
+
+                <div class="grid grid-cols-12">
+                    <!-- Contact Form Bento -->
+                    <div class="col-span-12 lg:col-span-7 p-6 sm:p-8 bg-white border-b lg:border-b-0 lg:border-r border-[#D1D1CB]">
+                        <h3 class="font-display font-bold text-xl text-black mb-2">Send a Direct Communication</h3>
+                        <p class="font-sans text-xs sm:text-sm text-[#555555] mb-6">
+                            Looking for a Senior Full-Stack Architect, AI Systems Engineer, or technical consultant? Drop a message below and I will respond within 24 hours.
+                        </p>
+
+                        <form id="contact-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-mono text-[11px] text-[#5A5A58] uppercase mb-1" for="name">Your Name / Organization</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        required
+                                        class="w-full p-2.5 bg-[#F8F8F5] border border-[#D1D1CB] text-black font-sans text-sm focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
+                                    />
+                                </div>
+                                <div>
+                                    <label class="block font-mono text-[11px] text-[#5A5A58] uppercase mb-1" for="email">Email Address</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        required
+                                        class="w-full p-2.5 bg-[#F8F8F5] border border-[#D1D1CB] text-black font-sans text-sm focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block font-mono text-[11px] text-[#5A5A58] uppercase mb-1" for="project-type">Project Scope / Engagement Type</label>
+                                <select id="project-type" class="w-full p-2.5 bg-[#F8F8F5] border border-[#D1D1CB] text-black font-sans text-sm focus:border-black focus:outline-none">
+                                    <option value="fulltime">Full-Time Senior / Lead Engineering Role</option>
+                                    <option value="contract">Architectural Consulting / Contract</option>
+                                    <option value="ai">AI / RAG Integration Project</option>
+                                    <option value="other">General Inquiries / Pairing</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block font-mono text-[11px] text-[#5A5A58] uppercase mb-1" for="message">Transmission Message</label>
+                                <textarea
+                                    id="message"
+                                    rows="4"
+                                    required
+                                    class="w-full p-2.5 bg-[#F8F8F5] border border-[#D1D1CB] text-black font-sans text-sm focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
+                                    placeholder="Describe requirements, timelines, or role details..."
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-orange w-full sm:w-auto">
+                                <span>DISPATCH MESSAGE</span>
+                                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Direct Social & Coordinate Compartments -->
+                    <div class="col-span-12 lg:col-span-5 p-6 sm:p-8 bg-[#F5F5F2] flex flex-col justify-between">
+                        <div>
+                            <div class="font-mono text-xs text-[#7A7A77] tracking-wider mb-4 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-[#FF5500]"></span>
+                                <span>DIRECT CHANNELS & RESUME</span>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="p-4 border border-[#D1D1CB] bg-white flex items-center justify-between">
+                                    <div>
+                                        <div class="font-mono text-[10px] text-[#7A7A77]">PRIMARY EMAIL</div>
+                                        <div class="font-mono text-sm font-bold text-black">PATTARASAWAN S..dev@gmail.com</div>
+                                    </div>
+                                    <button class="copy-email-btn btn-wire py-1.5 px-3 text-xs" aria-label="Copy primary email">COPY</button>
+                                </div>
+
+                                <div class="p-4 border border-[#D1D1CB] bg-white flex items-center justify-between">
+                                    <div>
+                                        <div class="font-mono text-[10px] text-[#7A7A77]">OFFICIAL RESUME / CV</div>
+                                        <div class="font-mono text-sm font-bold text-black">PATTARASAWAN S._resume_2026.pdf</div>
+                                    </div>
+                                    <a href="#contact" class="btn-wire py-1.5 px-3 text-xs flex items-center gap-1">
+                                        <i data-lucide="download" class="w-3 h-3"></i>
+                                        <span>PDF</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 mt-6">
+                                <a href="https://github.com" target="_blank" rel="noreferrer" class="p-3 border border-[#D1D1CB] bg-white flex items-center gap-3 hover:border-black transition-colors">
+                                    <i data-lucide="github" class="w-5 h-5 text-black"></i>
+                                    <div class="font-mono text-xs font-semibold text-black">GITHUB</div>
+                                </a>
+                                <a
+                                    href="https://linkedin.com"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="p-3 border border-[#D1D1CB] bg-white flex items-center gap-3 hover:border-black transition-colors"
+                                >
+                                    <i data-lucide="linkedin" class="w-5 h-5 text-black"></i>
+                                    <div class="font-mono text-xs font-semibold text-black">LINKEDIN</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 mt-6 border-t border-[#D1D1CB] font-mono text-[11px] text-[#7A7A77] flex items-center justify-between">
+                            <span>PING: 14ms (TLS 1.3)</span>
+                            <span>SIGNED: 0x7BF09...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright & Bottom Footer Strip -->
+                <footer class="p-6 border-t border-[#D1D1CB] bg-[#E4E4E0] flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-[#5A5A58]">
+                    <div>© 2026 PATTARASAWAN S.. ARCHITECTED WITH BENTO GRID & WIREFRAME PRINCIPLES.</div>
+                    <div class="flex items-center gap-4">
+                        <a href="#hero" class="hover:text-black flex items-center gap-1">
+                            <span>RETURN TO TOP</span>
+                            <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </footer>
+            </section>
+        </main>
+
+        <!-- =====================================================================
+       INTERACTIVE PROJECT DETAILS MODAL
+       ===================================================================== -->
+        <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-repo-title">
+            <div class="modal-content p-6 sm:p-8 bg-white border border-black relative">
+                <span class="corner-node corner-node-tl"></span>
+                <span class="corner-node corner-node-tr"></span>
+                <span class="corner-node corner-node-bl"></span>
+                <span class="corner-node corner-node-br"></span>
+
+                <div class="flex items-center justify-between pb-4 border-b border-[#D1D1CB]">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="folder-git-2" class="w-5 h-5 text-[#FF5500]"></i>
+                        <h3 id="modal-repo-title" class="font-display font-black text-xl text-black">Repository Details</h3>
+                    </div>
+                    <button id="close-modal-btn" class="p-1 hover:text-[#FF5500] text-black transition-colors" aria-label="Close modal">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <div class="py-4">
+                    <p id="modal-repo-desc" class="font-sans text-sm text-[#444444] mb-4"></p>
+
+                    <div class="p-4 border border-[#D1D1CB] bg-[#F9F9F7] mb-4">
+                        <div class="font-mono text-xs text-[#FF5500] font-bold mb-1">SYSTEM ARCHITECTURE:</div>
+                        <div id="modal-repo-arch" class="font-mono text-xs text-[#333333]"></div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="font-mono text-xs text-[#7A7A77] mb-2">TECHNOLOGIES & TOOLS:</div>
+                        <div id="modal-repo-tech" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-4 border-t border-[#D1D1CB]">
+                        <a id="modal-repo-github" href="#" target="_blank" rel="noreferrer" class="btn-wire">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            <span>VIEW ON GITHUB</span>
+                        </a>
+                        <a id="modal-repo-live" href="#" target="_blank" rel="noreferrer" class="btn-orange">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            <span>OPEN LIVE DEMO</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =====================================================================
+       CLIPBOARD TOAST NOTIFICATION
+       ===================================================================== -->
+        <div id="toast-notification" class="toast-notice" role="alert" aria-live="polite">
+            <i data-lucide="check-circle" class="w-4 h-4 text-[#FF5500]"></i>
+            <span class="toast-msg">COPIED TO CLIPBOARD</span>
+        </div>
+
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+        <script>
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById("mobile-menu-btn");
+            const mainNav = document.getElementById("main-nav");
+            if (mobileBtn && mainNav) {
+                mobileBtn.addEventListener("click", () => {
+                    mainNav.classList.toggle("hidden");
+                    mainNav.classList.toggle("flex");
+                    mainNav.classList.toggle("flex-col");
+                    mainNav.classList.toggle("w-full");
+                });
+            }
+        </script>
+    </body>
+</html>
